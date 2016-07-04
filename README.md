@@ -8,6 +8,10 @@ Slightly smaller than your average-sized otter.
 
 To run the scripts in the `Python` folder, please be sure to first run `pip install -r requirements.txt` from that folder, which will ensure the `PyMySql` dependency is installed correctly.
 
+Next, you'll need to open `code_sample.py` the file and change the values in `default_login_data` to contain the correct login credentials.
+
+Then, run `code_sample.py` from the command line.
+
 ## API
 
 The `serverless-tinyotter` folder contains a serverless implementation of an API which exposes a single endpoint at [api.tinyotter.com/getWordCounts](http://api.tinyotter.com/getWordCounts).
