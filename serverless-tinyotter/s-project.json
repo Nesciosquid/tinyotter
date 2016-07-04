@@ -1,0 +1,7 @@
+{
+  "name": "serverless-tinyotter",
+  "custom": {},
+  "plugins": [
+    "serverless-cors-plugin"
+  ]
+}
