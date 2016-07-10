@@ -17,6 +17,7 @@ export const WordTable = ({ rows }) => (
     <TableHeader
       numeric
       name="percentage"
+      cellFormatter={(percentage) => `\%${percentage.toFixed(2)}`}
     >
       Frequency
     </TableHeader>

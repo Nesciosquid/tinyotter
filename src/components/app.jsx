@@ -14,11 +14,13 @@ export const TinyOtterApp = (props, { store }) => {
   let skippedWords = 0;
   let minCount = 5;
   let max = 5;
+  const absMin = 15;
   let min = 1;
   if (words && words.length > 0) {
     minCount = state.minCount;
-    max = words[0][1];
+    max = words[1][1] + 10;
     min = words[words.length - 1][1];
+    if (min < absMin) min = absMin;
 
     words.forEach((word) => {
       const count = word[1];
@@ -34,7 +36,7 @@ export const TinyOtterApp = (props, { store }) => {
       const count = word[1];
       const text = word[0];
       const freq = count / totalWords;
-      const percentage = `${(freq * 100).toFixed(2)}%`;
+      const percentage = (freq * 100);
       rows.push({
         count,
         word: text,
