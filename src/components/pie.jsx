@@ -17,11 +17,11 @@ const makeChartData = (wordCounts) => {
   // return pieData;
 };
 
-export const Pie = ({ wordCounts }) => (
+export const Pie = ({ wordCounts, width, height }) => (
   <PieChart
     data={makeChartData(wordCounts)}
-    width={350}
-    height={300}
+    width={width}
+    height={height}
     radius={90}
     innerRadius={20}
     showInnerLabels={false}
@@ -31,4 +31,6 @@ export const Pie = ({ wordCounts }) => (
 
 Pie.propTypes = {
   wordCounts: React.PropTypes.array,
+  width: React.PropTypes.number,
+  height: React.PropTypes.number,
 };
