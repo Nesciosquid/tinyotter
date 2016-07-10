@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardText, Slider } from 'react-mdl';
 import { PaneCard } from './paneCard.jsx';
+import { Pie } from './pie.jsx';
 
 export const ControlPane = ({ max, min, minCount, skipped, total, rows }, { store }) => {
   const update = (event) => {
@@ -9,7 +10,6 @@ export const ControlPane = ({ max, min, minCount, skipped, total, rows }, { stor
       count: parseInt(event.target.value, 10),
     });
   };
-
   const disableSlider = (rows.length === 0);
   return (
     <PaneCard title="Controls">
@@ -23,6 +23,9 @@ export const ControlPane = ({ max, min, minCount, skipped, total, rows }, { stor
           value={minCount}
           onChange={update}
         />
+        <div style={{ margin: 'auto', width: '350px', height: '300px' }} >
+          <Pie wordCounts={rows} />
+        </div>
         <div style={{ height: '10px' }}></div>
       </div>
     </PaneCard>

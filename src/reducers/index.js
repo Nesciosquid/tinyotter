@@ -1,6 +1,6 @@
 const initialState = {
   sortedWords: [],
-  minCount: 5,
+  minCount: 25,
 };
 
 const setWords = (state, newWords) => (
