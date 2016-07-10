@@ -23,8 +23,8 @@ export const ControlPane = ({ max, min, minCount, skipped, total, rows }, { stor
           value={minCount}
           onChange={update}
         />
-        <div style={{ margin: 'auto', width: '300px', height: '300px' }} >
-          <Pie width={300} height={300} wordCounts={rows} />
+      <div style={{ margin: 'auto', width: '300px', height: '250px' }} >
+          <Pie width={300} height={250} wordCounts={rows} />
         </div>
         <div style={{ height: '10px' }}></div>
       </div>

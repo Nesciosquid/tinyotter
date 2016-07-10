@@ -22,8 +22,8 @@ export const Pie = ({ wordCounts, width, height }) => (
     data={makeChartData(wordCounts)}
     width={width}
     height={height}
-    radius={90}
-    innerRadius={20}
+    radius={width * 0.25}
+    innerRadius={width * 0.125}
     showInnerLabels={false}
     sectorBorderColor="white"
   />
